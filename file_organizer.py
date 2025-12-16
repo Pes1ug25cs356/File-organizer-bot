@@ -2,11 +2,8 @@ import os
 import shutil
 
 def organize_by_type(directory):
-    """Organizes files into folders based on their file extension."""
     print(f"\nScanning '{directory}' for files...")
     
-    # Dictionary mapping extensions to folder names
-    # You can add more types here!
     file_types = {
         'Images': ['.jpg', '.jpeg', '.png', '.gif', '.bmp'],
         'Documents': ['.pdf', '.docx', '.txt', '.xlsx', '.pptx'],
@@ -16,7 +13,7 @@ def organize_by_type(directory):
         'Code': ['.py', '.js', '.html', '.css', '.java', '.cpp']
     }
 
-    # Create a 'Misc' category for everything else
+    
     misc_folder = "Others"
 
     for filename in os.listdir(directory):
@@ -58,10 +55,6 @@ def organize_by_size(directory):
     """Organizes files into folders based on their size."""
     print(f"\nScanning '{directory}' for files...")
 
-    # Define size categories
-    # Small: < 1MB
-    # Medium: 1MB - 100MB
-    # Large: > 100MB
     
     for filename in os.listdir(directory):
         file_path = os.path.join(directory, filename)
@@ -98,10 +91,9 @@ def main():
     print("--------------------------------------------------")
     print("I can help you tidy up your messy folders.")
     
-    # Ask for the directory
     while True:
         target_dir = input("\nPlease enter the full path of the folder to organize: ").strip()
-        # Remove quotes if the user copied as path (common in Windows)
+        # Remove quotes 
         target_dir = target_dir.replace('"', '')
         
         if os.path.exists(target_dir) and os.path.isdir(target_dir):
@@ -109,7 +101,6 @@ def main():
         else:
             print("That directory doesn't seem to exist. Please try again.")
 
-    # Ask for the organization method
     print("\nHow would you like to organize your files?")
     print("1. By Type (Images, Docs, etc.)")
     print("2. By Size (Small, Medium, Large)")
