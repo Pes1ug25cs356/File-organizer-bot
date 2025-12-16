@@ -31,7 +31,6 @@ def organize_by_type(directory):
         _, extension = os.path.splitext(filename)
         extension = extension.lower()
 
-        # Find the right folder
         destination_folder = misc_folder
         for folder, extensions in file_types.items():
             if extension in extensions:
@@ -52,7 +51,6 @@ def organize_by_type(directory):
             print(f"Error moving {filename}: {e}")
 
 def organize_by_size(directory):
-    """Organizes files into folders based on their size."""
     print(f"\nScanning '{directory}' for files...")
 
     
