@@ -21,10 +21,10 @@ def organize_by_type(directory):
 
         # Skip directories, only move files
         if os.path.isdir(file_path):
-            continue
+        	continue
 	
-		if filename==os.path.basename(__file__):
-	    	continue
+	    if filename==os.path.basename(__file__):
+	        continue
         
 
         # Get the file extension (lowercase for easier matching)
