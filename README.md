@@ -71,7 +71,6 @@ The script automatically detects extensions and sorts them as follows:
 
 ## 👤 Author
 
-**[Your Name]**
 
   * GitHub: [@pes1ug25cs356](https://github.com/yourusername)
   * GitHub: [@pes1ug25cs354](https://github.com/yourusername)
